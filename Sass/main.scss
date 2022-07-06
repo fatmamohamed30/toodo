@@ -1,0 +1,343 @@
+//start of normalize
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+//end of normalize
+
+// astart of navbar
+.navpar{
+    background-color: rgba(189, 205, 223, 0.7);
+    width: 100%;
+    height: 55px;
+    transition:1.5s;
+    display: flex;
+     img{
+        margin-left: 2%;
+        margin-top: 7px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 40px;
+        }
+    .nav-icon{
+        display: flex;        
+        .checkbtn{
+            font-size: 30px;
+            color: #fff;
+            float: right;
+            line-height: 80px;
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+            display: none;
+        }
+        #check{
+            display: none;
+        }
+        ul{
+            margin-left: 70%;
+            display: grid;
+            grid-template-columns: repeat(5,20%);
+            
+            li{
+                padding: {
+                    left:20px;
+                    top: 15px;
+                }
+                a{
+                    color: rgb(197, 8, 71);
+                    font: {
+                        size: 20px;
+                    }
+                    transition: 1s;
+                    &:hover{
+                        color: #fff;
+                    background-color: rgb(197, 8, 71);
+                }  
+                padding: 5px;
+            }
+            .active{
+                color: #fff;
+                background-color: rgb(197, 8, 71);
+                }
+            }
+         } 
+    }
+}   
+@media (max-width:970px) {
+    .navpar{
+        .nav-icon{ 
+        ul{ 
+            li{       
+                a{
+                   font-size: 15px; 
+                }  
+            }    
+            
+            }
+        }
+    }
+}
+@media (max-width:870px) {
+    .navpar{
+        height: 60px;
+        .nav-icon{ 
+            .checkbtn{
+                display: block;
+            }
+            ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background-color: rgb(184, 184, 184);
+                top: 60px;
+                left:-70%;
+                text-align: center;
+                transition-duration: 1.5s;
+                display: block;
+                li{
+                    display: block;
+                    line-height: 70px;
+                    font-size: 50px;
+                    font-weight: bold;
+                }
+            }
+            #check:checked ~ ul{
+                left: 70%;
+                transition-duration: 1.6s;
+            }
+            a{
+                &:hover{
+                    background-color: none;
+                    color: #fff;
+                    padding: 9px 100px;
+                    font-weight: bold;
+                }
+                }
+            }
+        }    
+    }
+    
+// end of navbar
+
+// start of hero
+.hero{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    margin-bottom: 5%;
+    .imo{
+        width: 100%;
+        height: 600px;  
+        background: {
+            image: url(../imges/hero-img.webp);
+            repeat: no-repeat;
+            position:center ;
+            size: 100% 600px ;
+        }
+    }  
+    .caption{
+        padding: {
+            top: 10%;
+            left: 5%;
+        }
+        span{
+            color: #555;
+            font-size: 14px;
+        }
+        h1{
+            font: {
+                size:40px;
+                weight:bold;
+            }
+            line-height: 50px;
+            margin: {
+                bottom: 3%;
+                top: 3%;
+            }
+        }
+        p{
+            color: #222;
+            line-height: 25px;
+            font-size: 17px;
+        }
+        button{
+            padding: 7px 15px;
+            border-radius: 20px;
+            font: 17px bold;
+            color: #fff;
+            background-color: rgb(255, 195, 42);
+            border: 2px solid rgb(255, 195, 42);
+            text-align: center;
+            margin-left: 40%;
+            margin-top: 7%;
+        }
+    }
+}
+@media (max-width:970px) {
+    .hero{
+        display: grid;
+        grid-template-columns: repeat(1,100%);
+        .caption{
+            h1{
+                font-size: 32px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+    
+}
+// end of hero
+
+// start of logo
+
+.logos{
+    display: grid;
+    grid-template-columns: repeat(4,21%);
+    column-gap: 2%;
+    justify-content: center;
+    margin-bottom: 15%;
+    .main-class{
+        background-color: rgb(255, 238, 241);
+        height: 250px;
+        border-radius: 20px;
+        padding: 20px;
+        .main{
+            background-color: rgb(187, 116, 140);
+            width: 65px;
+            height:65px;
+            border-radius: 50%;
+            margin-bottom: 8%;
+            text-align: center;
+            i{
+                font-size: 27px;
+                color: #fff;
+                padding-top: 10px;
+            }
+        }
+        .parent1{
+            color: rgb(5, 5, 66);
+            font-size: 30px;
+            margin: {
+                top:3%;
+                bottom: 3%;
+            }
+        }
+        .parent2{
+            color: rgb(158, 158, 158);
+            line-height: 25px;
+        }
+    }
+    .one{
+        background-color: rgb(210, 255, 227);
+        height: 250px;
+        border-radius: 20px;
+        padding: 20px;
+        .log1{
+        background-color: rgb(105, 204, 143);
+            width: 65px;
+            height:65px;
+            border-radius: 50%;
+            margin-bottom: 8%;
+            text-align: center;
+            i{
+                font-size: 27px;
+                color: #fff;
+                padding-top: 10px;
+            }
+        }
+        h2{
+            color: rgb(5, 5, 66);
+            font-size: 30px;
+            margin: {
+                top:3%;
+                bottom: 3%;
+            }
+        }
+        p{
+            color: rgb(158, 158, 158);
+            line-height: 25px;
+        }
+    }
+    .two{
+        background-color: rgb(251, 255, 194);
+        height: 250px;
+        border-radius: 20px;
+        padding: 20px;
+        .log2{
+        background-color: rgb(219, 206, 146);
+            width: 65px;
+            height:65px;
+            border-radius: 50%;
+            margin-bottom: 8%;
+            text-align: center;
+            i{
+                font-size: 27px;
+                color: #fff;
+                padding-top: 10px;
+            }
+        }
+        h2{
+            color: rgb(5, 5, 66);
+            font-size: 30px;
+            margin: {
+                top:3%;
+                bottom: 3%;
+            }
+        }
+        p{
+            color: rgb(158, 158, 158);
+            line-height: 25px;
+        }
+    }
+    .three{
+        background-color: rgb(214, 232, 255);
+        height: 250px;
+        border-radius: 20px;
+        padding: 20px;
+        .log3{
+            background-color: rgb(167, 198, 255);
+            width: 65px;
+            height:65px;
+            border-radius: 50%;
+            margin-bottom: 8%;
+            text-align: center;
+            i{
+                font-size: 27px;
+                color: #fff;
+                padding-top: 10px;
+            }
+        }
+        h2{
+            color: rgb(5, 5, 66);
+            font-size: 30px;
+            margin: {
+                top:3%;
+                bottom: 3%;
+            }
+        }
+        p{
+            color: rgb(158, 158, 158);
+            line-height: 25px;
+        }
+    }
+}
+@media (max-width:1150px) {
+        .logos{
+            grid-template-columns: repeat(2,40%);
+            gap: 5%;
+        }
+    }   
+    @media (max-width:700px) {
+        .logos{
+            height: 180vh;
+            grid-template-columns: repeat(1,95%);
+            gap: 5%;
+            
+    }
+}   
